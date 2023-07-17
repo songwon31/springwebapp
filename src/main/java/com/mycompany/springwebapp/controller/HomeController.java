@@ -11,6 +11,7 @@ public class HomeController {
 	//http://localhost:8080/springwebapp/
 	@RequestMapping("/")
 	public String index() {
+		log.info("실행1");
 		log.info("실행2");
 		return "index";
 	}
