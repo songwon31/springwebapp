@@ -23,6 +23,17 @@
 		</plugins>
 	</build>
 
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>Central Repository</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<!-- 서블릿 4.0 의존 설정 -->
 		<!-- 참조: https://tomcat.apache.org/whichversion.html -->

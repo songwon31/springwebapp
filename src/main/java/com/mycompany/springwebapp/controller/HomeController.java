@@ -8,6 +8,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Controller
 public class HomeController {
+	
+	public HomeController() {
+		log.info("실행");
+	}
+	
 	//http://localhost:8080/springwebapp/
 	@RequestMapping("/")
 	public String index() {
