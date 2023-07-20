@@ -181,7 +181,6 @@ public class Ch02Controller {
 		
 		//응답 본문에 파일 데이터 싣기
 		OutputStream os = response.getOutputStream();
-		InputStream is = new FileInputStream(filePath);
 		Path path = Paths.get(filePath);
 		Files.copy(path, os);
 		os.flush();

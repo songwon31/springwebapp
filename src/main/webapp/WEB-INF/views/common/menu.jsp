@@ -15,4 +15,18 @@
       </h6>
    </li>
    
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+         <span class="mr-2">Ch03.</span>
+         <a class="text-white" href="${pageContext.request.contextPath}/ch03/content">요청 매핑(처리) 메서드의 매개변수</a>
+      </h6>
+   </li>
+   
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+         <span class="mr-2">Ch04.</span>
+         <a class="text-white" href="${pageContext.request.contextPath}/ch04/content">요청 데이터의 유효성 검사</a>
+      </h6>
+   </li>
+   
 </ul>
