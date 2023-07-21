@@ -7,7 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import lombok.Data;
 
 @Data
-public class Ch04Dto {
+public class Ch04Form1 {
 	private String param1;
 	private String param2;
 	private String param3;
