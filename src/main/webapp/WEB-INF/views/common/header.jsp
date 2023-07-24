@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html>
@@ -23,9 +24,15 @@
 					전자정부 프레임워크(Spring Framework)
 				</a>
 				<div>
-					<div>
-						<a href="#" class="btn btn-success btn-sm">로그인</a>
-					</div>
+					<c:if test="${login == null}">
+						<div>
+							<a href="${pageContext.request.contextPath}/ch08/content" class="btn btn-success btn-sm">로그인</a>
+						</div>
+					</c:if>
+					<c:if test="${login != null}">
+						<img src="${pageContext.request.contextPath}/resources/images/face/${login.mid}.png" width="30" height="30"/>
+						<a href="${pageContext.request.contextPath}/ch08/logout" class="btn btn-success btn-sm">로그아웃</a>
+					</c:if>
 				</div>
 			</nav>
 	

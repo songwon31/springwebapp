@@ -36,4 +36,25 @@
       </h6>
    </li>
    
+    <li class="nav-item mb-2">
+      <h6 class="text-white">
+         <span class="mr-2">Ch06.</span>
+         <a class="text-white" href="${pageContext.request.contextPath}/ch06/content">Forward와 Redirect</a>
+      </h6>
+   </li>
+   
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+         <span class="mr-2">Ch07.</span>
+         <a class="text-white" href="${pageContext.request.contextPath}/ch07/content">모델(데이터) 전달</a>
+      </h6>
+   </li>
+   
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+         <span class="mr-2">Ch08.</span>
+         <a class="text-white" href="${pageContext.request.contextPath}/ch08/content">세션 이용</a>
+      </h6>
+   </li>
+   
 </ul>
