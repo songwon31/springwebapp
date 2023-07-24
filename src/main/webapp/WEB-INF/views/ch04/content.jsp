@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ include file="/WEB-INF/views/common/header.jsp"%>
 
@@ -9,37 +11,41 @@
 		<div class="card m-2">
 			<div class="card-header">POST 방식으로 요청</div>
 			<div class="card-body">
-				<form id="form1" method="post" action="method1" onsubmit="checkData()">
+				<form id="form1" method="post" action="method1">
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">param1</span>
 						</div>
-						<input type="text" name="param1" class="form-control" value="">
-						<span class="param1-error text-danger"></span>
+						<input type="text" name="param1" class="form-control" value="${ch04Form1.param1}">
+						<!-- <span class="param1-error text-danger"></span> -->
+						<form:errors path="ch04Form1.param1" cssClass="text-danger"/>
 					</div>
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">param2</span>
 						</div>
-						<input type="text" name="param2" class="form-control" value="">
-						<span class="param2-error text-danger"></span>
+						<input type="text" name="param2" class="form-control" value="${ch04Form1.param2}">
+						<!-- <span class="param2-error text-danger"></span> -->
+						<form:errors path="ch04Form1.param2" cssClass="text-danger"/>
 					</div>
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">param3</span>
 						</div>
-						<input type="text" name="param3" class="form-control" value="">
-						<span class="param3-error text-danger"></span>
+						<input type="text" name="param3" class="form-control" value="${ch04Form1.param3}">
+						<!-- <span class="param3-error text-danger"></span> -->
+						<form:errors path="ch04Form1.param3" cssClass="text-danger"/>
 					</div>
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">param4</span>
 						</div>
 						<div class="btn-group btn-group-toggle" data-toggle="buttons">
-							<label class="btn btn-secondary active"> <input
-								type="radio" name="param4" checked value="true"> true
-							</label> <label class="btn btn-secondary"> <input type="radio"
-								name="param4" value="false"> false
+							<label class="btn btn-secondary active"> 
+								<input type="radio" name="param4" <c:if test="${ch04Form1.param4}">checked</c:if> value="true"> true
+							</label>
+							<label class="btn btn-secondary"> 
+								<input type="radio" name="param4" <c:if test="${!ch04Form1.param4}">checked</c:if> value="false"> false
 							</label>
 						</div>
 					</div>
@@ -47,8 +53,8 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text">param5</span>
 						</div>
-						<input type="date" name="param5" class="form-control"> <span
-							class="param5-error text-danger"></span>
+						<input type="date" name="param5" class="form-control" value='<fmt:formatDate value="${ch04Form1.param5}" pattern="yyyy-MM-dd"/>'> 
+						<span class="param5-error text-danger"></span>
 					</div>
 					<input class="mt-2 btn btn-info btn-sm" type="submit" value="요청" />
 				</form>
@@ -129,40 +135,42 @@
 		</div>
 
 		<div class="card m-2">
-			<div class="card-header">AJAX로 요청</div>
+			<div class="card-header">실습1</div>
 			<div class="card-body">
-				<form id="form2" name="form2">
+				<form id="form2" name="form2" action="method2" onsubmit="checkData2">
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">param1</span>
 						</div>
-						<input type="text" id="param1" name="param1" class="form-control">
+						<input type="text" id="param1" name="param1" class="form-control" value="${ch04Form2.param1}">
 						<span class="param1-error text-danger"></span>
+						<!-- <form:errors path="ch04Form2.param1" cssClass="text-danger"/> -->
 					</div>
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">param2</span>
 						</div>
-						<input type="text" id="param2" name="param2" class="form-control">
+						<input type="text" id="param2" name="param2" class="form-control" value="${ch04Form2.param2}">
 						<span class="param2-error text-danger"></span>
+						<!-- <form:errors path="ch04Form2.param2" cssClass="text-danger"/> -->
 					</div>
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">param3</span>
 						</div>
-						<input type="text" id="param3" name="param3" class="form-control">
+						<input type="text" id="param3" name="param3" class="form-control" value="${ch04Form2.param3}">
 						<span class="param3-error text-danger"></span>
+						<!-- <form:errors path="ch04Form2.param3" cssClass="text-danger"/> -->
 					</div>
 					<div class="input-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text">param4</span>
 						</div>
 						<div class="btn-group btn-group-toggle" data-toggle="buttons">
-							<label class="btn btn-secondary active"> <input
-								type="radio" id="radio1" name="param4" checked value="true">
-								true
-							</label> <label class="btn btn-secondary"> <input type="radio"
-								id="radio2" name="param4" value="false"> false
+							<label class="btn btn-secondary active"> 
+								<input type="radio" id="radio1" name="param4"  <c:if test="${ch04Form2.param4}">checked</c:if> value="true"> true
+							</label> <label class="btn btn-secondary"> 
+								<input type="radio" id="radio2" name="param4"  <c:if test="${!ch04Form2.param4}">checked</c:if> value="false"> false
 							</label>
 						</div>
 					</div>
@@ -170,60 +178,23 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text">param5</span>
 						</div>
-						<input type="date" id="param5" name="param5" class="form-control"
-							value="2030-12-05">
+						<input type="date" id="param5" name="param5" class="form-control" value='<fmt:formatDate value="${ch04Form1.param5}" pattern="yyyy-MM-dd"/>'>
+					</div>
+					<div class="mt-2">
+					<button class="btn btn-info btn-sm" onclick="requestPost()">POST 방식 요청</button>
 					</div>
 				</form>
-				<div class="mt-2">
-					<button class="btn btn-info btn-sm" onclick="requestPost()">POST 방식 요청</button>
-				</div>
+				
 			</div>
 			<script>
-            function requestPost() {
-               const param1 = $("#param1").val(); //주민번호: xxxxxx-1,2,3,4xxxxxx
-               const param2 = $("#param2").val(); //년월일: 19680315
-               const param3 = $("#param3").val(); //패스워드: 알파벳으로시작 최소 8자 초대 10
-               const param4 = $("#form1 input[name=param4]:checked").val();
-               const param5 = $("#param5").val();
-               
-               let checkData = true;
-               
-               const param1Error = $("#form2 .param1-error");
-               param1Error.html("");
-               if(param1 === "") {
-                  param1Error.html("필수 입력 사항");
-                  checkData = false;
-               } else {
-                  const pattern = /^\d{2}([0]\d|[1][0-2])([0][1-9]|[1-2]\d|[3][0-1])[-]*[1-4][0-9]{6}$/;
-                  const result = pattern.test(param1);
-                  if(result === false) {
-                     param1Error.html("주민번호 형식이 아님");
-                     checkData = false;
-                  }
-               }
-               
-               if(checkData) {
-                  $.ajax({
-                     url:"method1",
-                     method:"post",
-                     data: {
-                        param1:param1, 
-                        param2, 
-                        param3, 
-                        param4, 
-                        param5
-                     },
-                     success: function(data) {
-                    	 
-                     }
-                  });
-               }
+            function checkData2() {
+              
             }
          </script>
 		</div>
 
 		<div class="card m-2">
-			<div class="card-header">서버측 유효성 검사</div>
+			<div class="card-header">실습2</div>
 			<div class="card-body">
 				<div class="card m-2">
 					<div class="card-header">회원 가입 폼</div>
@@ -267,7 +238,7 @@
 				</div>
 
 				<div class="card m-2">
-					<div class="card-header">로그인 폼</div>
+					<div class="card-header">실습3</div>
 					<div class="card-body">
 						<form id="form4" method="post" action="login">
 							<div class="input-group">
