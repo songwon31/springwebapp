@@ -9,7 +9,12 @@
 
 	<!-- id 속성값을 반드시 작성(이름으로 객체를 찾아서 사용) -->
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basename" value="message.ch04_error"/>
+		<property name="basenames">
+			<list>
+				<value>message.ch04_error</value>
+				<value>message.ch11_internationalization</value>
+			</list>
+		</property>
 	</bean>
 
 </beans>

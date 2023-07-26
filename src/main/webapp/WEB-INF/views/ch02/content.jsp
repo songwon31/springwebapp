@@ -13,7 +13,7 @@
 					<a 	href="method?bkind=free&bno=1" class="btn btn-info btn-sm">GET방식(&lt;a&gt;)</a>
 				</div>
 				<hr />
-				<form class="m-2" method="get" action="method">
+				<form class="m-2" method="get" action="method" >
 					<div class="form-group">
 						<label for="bkind">bkind</label> 
 						<input type="text" class="form-control" id="bkind" name="bkind" value="free">

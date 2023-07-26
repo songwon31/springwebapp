@@ -57,4 +57,32 @@
       </h6>
    </li>
    
+    <li class="nav-item mb-2">
+      <h6 class="text-white">
+         <span class="mr-2">Ch09.</span>
+         <a class="text-white" href="${pageContext.request.contextPath}/ch09/content">파일 업로드와 다운로드</a>
+      </h6>
+   </li>
+   
+    <li class="nav-item mb-2">
+      <h6 class="text-white">
+         <span class="mr-2">Ch10.</span>
+         <a class="text-white" href="${pageContext.request.contextPath}/ch10/content">예외 처리</a>
+      </h6>
+   </li>
+   
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+         <span class="mr-2">Ch11.</span>
+         <a class="text-white" href="${pageContext.request.contextPath}/ch11/content">스프링 태그 라이브러리</a>
+      </h6>
+   </li>
+   
+   <li class="nav-item mb-2">
+      <h6 class="text-white">
+         <span class="mr-2">Ch12.</span>
+         <a class="text-white" href="${pageContext.request.contextPath}/ch12/content">객체 생성(싱글톤) 및 의존 주입</a>
+      </h6>
+   </li>
+   
 </ul>
