@@ -89,6 +89,12 @@
 			<version>5.3.29</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>5.3.29</version>
+		</dependency>
+
 		<!-- 자바 코드로 JSON을 생성하거나, JSON을 파싱해서 이용할 때 사용하는 라이브러리 -->
 		<dependency>
 			<groupId>org.json</groupId>
@@ -117,9 +123,43 @@
 			<version>1.5</version>
 		</dependency>
 
+		<!-- Ch13 커넥션 풀을 사용하기 위해 필요 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+
+		<!-- Ch13 JDBC Driver -->
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>19.3.0.0</version>
+		</dependency>
+
+		<!-- Ch13 JDBC가 생성하는(MyBatis) SQL문을 로그로 출력해주는 라이브러리 -->
+		<dependency>
+			<groupId>com.googlecode.log4jdbc</groupId>
+			<artifactId>log4jdbc</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- Ch13 스프링 프레임워크에서 MyBatis를 사용하기 위해 필요한 라이브러리 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.13</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>2.1.1</version>
+		</dependency>
 
 
 
+	
 	</dependencies>
 </project>
 

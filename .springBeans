@@ -14,9 +14,12 @@
 		<config>src/main/resources/spring/dispatcher/Ch09-multipart-resolver.xml</config>
 		<config>src/main/resources/spring/dispatcher/ch04-ch11-message.xml</config>
 		<config>src/main/resources/spring/root/ch12-create-bean-di.xml</config>
+		<config>src/main/resources/spring/root/ch13-mybatis.xml</config>
 	</configs>
 	<autoconfigs>
+		<config>src/main/resources/spring/root/ch12-properties.xml</config>
 		<config>src/main/resources/spring/dispatcher/ch01-component-scan.xml</config>
+		<config>src/main/resources/spring/root/ch13-datasource.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

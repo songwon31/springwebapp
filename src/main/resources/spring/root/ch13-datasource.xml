@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- WebApplication에서 관리하는 Connection Pool 생성 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+		<!-- Connection을 생성하기 위한 정보를 설정 -->
+		
+		<!-- 
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+		 -->
+		 
+		<!-- SQL문을 로그로 출력하거나, 받은 결과를 로그로 출력하기 위한 설정(개발중) -->
+		<property name="driverClassName" value="net.sf.log4jdbc.DriverSpy"/>
+		<property name="url" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:orcl"/>
+		
+		<property name="username" value="spring"/>
+		<property name="password" value="oracle"/>
+		<!-- Connection 수를 관리하는 방법 설정 -->
+		<property name="maxTotal" value="3"/>
+		<property name="initialSize" value="2"/>
+		<property name="maxIdle" value="2"/>
+	</bean>
+	
+	<!-- WAS에서 관리하는 Connection Pool 참조 -->
+	<!-- 
+		<jee:jndi-lookup 
+		id="dataSource" 
+		jndi-name="참조이름"
+		expected-type="javax.sql.DataSource"/>
+	 -->
+</beans>
