@@ -157,9 +157,16 @@
 			<version>2.1.1</version>
 		</dependency>
 
+		<!-- Ch13 PasswordEncoder를 사용하기 위해 필요한 라이브러리 -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>5.5.8</version>
+		</dependency>
 
 
-	
+
+
 	</dependencies>
 </project>
 

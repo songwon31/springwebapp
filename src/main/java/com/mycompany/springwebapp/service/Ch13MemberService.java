@@ -10,7 +10,12 @@ public interface Ch13MemberService {
 		FAIL_ENABLED
 	}
 	
-	public void join(Ch13Member member);
+	public enum JoinResult {
+		SUCCESS,
+		FAIL_DUPLICATED_MID,
+	}
+	
+	public JoinResult join(Ch13Member member);
 	public LoginResult login(Ch13Member member);
 	public void modify(Ch13Member member);
 	public void unjoin(String mid);

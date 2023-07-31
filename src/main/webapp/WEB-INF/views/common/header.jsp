@@ -24,6 +24,7 @@
 					전자정부 프레임워크(Spring Framework)
 				</a>
 				<div>
+					<%-- Ch08
 					<c:if test="${login == null}">
 						<div>
 							<a href="${pageContext.request.contextPath}/ch08/content" class="btn btn-success btn-sm">로그인</a>
@@ -32,6 +33,18 @@
 					<c:if test="${login != null}">
 						<img src="${pageContext.request.contextPath}/resources/images/face/${login.mid}.png" width="30" height="30"/>
 						<a href="${pageContext.request.contextPath}/ch08/logout" class="btn btn-success btn-sm">로그아웃</a>
+					</c:if>
+					 --%>
+					 
+					<%-- Ch13 --%>
+					<c:if test="${ch13Login == null}">
+						<div>
+							<a href="${pageContext.request.contextPath}/ch13/content" class="btn btn-success btn-sm">로그인</a>
+						</div>
+					</c:if>
+					<c:if test="${ch13Login != null}">
+						<img src="${pageContext.request.contextPath}/resources/images/face/member07.png" width="30" height="30"/>
+						<a href="${pageContext.request.contextPath}/ch13/logout" class="btn btn-success btn-sm">로그아웃</a>
 					</c:if>
 				</div>
 			</nav>

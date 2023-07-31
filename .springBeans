@@ -10,11 +10,11 @@
 		<config>src/main/resources/spring/dispatcher/ch01-view-resolver.xml</config>
 		<config>src/main/resources/spring/root/ch01-component-scan.xml</config>
 		<config>src/main/resources/spring/dispatcher/ch01-static-resource.xml</config>
-		<config>src/main/resources/spring/dispatcher/ch02-ch08-interceptor.xml</config>
 		<config>src/main/resources/spring/dispatcher/Ch09-multipart-resolver.xml</config>
 		<config>src/main/resources/spring/dispatcher/ch04-ch11-message.xml</config>
 		<config>src/main/resources/spring/root/ch12-create-bean-di.xml</config>
 		<config>src/main/resources/spring/root/ch13-mybatis.xml</config>
+		<config>src/main/resources/spring/dispatcher/ch02-ch08-ch13-interceptor.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/resources/spring/root/ch12-properties.xml</config>
